@@ -10,14 +10,13 @@
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap" rel="stylesheet">
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             rel="stylesheet"
         />
+
+        
         <style>
             :root {
                 --background: hsl(0, 0%, 100%);
@@ -40,14 +39,14 @@
                 --destructive-foreground: hsl(60, 9.1%, 97.8%);
                 --ring: hsl(20, 14.3%, 4.1%);
                 --radius: 0.5rem;
-
                 /* Gaming color scheme */
                 --game-dark: hsl(237, 58%, 9%);
-                --game-purple: hsl(240, 28%, 13%);
-                --game-blue: hsl(218, 42%, 16%);
-                --game-pink: hsl(348, 83%, 62%);
-                --game-teal: hsl(210, 73%, 19%);
+                --game-purple: hsl(274 28% 27.8%);
+                --game-blue: hsl(238 28.8% 31.9%);
+                --game-pink: hsl(332 83% 77.9%);
+                --game-teal: hsl(137 52.8% 27.6%);
                 --game-text: hsl(0, 0%, 92%);
+                --game-green: hsl(100 100% 15.9%);
             }
 
             * {
@@ -60,8 +59,16 @@
                 scroll-behavior: smooth;
             }
 
+            .bitcount-grid-single-<BitCount> {
+                font-family: "Bitcount Grid Single", system-ui;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+            }
+
             body {
-                font-family: "Inter", sans-serif;
+                font-family: Bitcount Grid Single;
                 background-color: var(--game-dark);
                 color: var(--game-text);
                 line-height: 1.6;
@@ -79,8 +86,8 @@
             .text-gradient {
                 background: linear-gradient(
                     135deg,
-                    var(--game-pink) 0%,
-                    #a855f7 100%
+                    var(--game-teal) 0%,
+                    var(--game-text) 100%
                 );
                 background-clip: text;
                 -webkit-background-clip: text;
@@ -174,7 +181,7 @@
             }
 
             .grid-3 {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                grid-template-columns: repeat(3, minmax(350px, 1fr));;
             }
 
             @media (max-width: 768px) {
@@ -194,59 +201,49 @@
     </head>
     <body>
         <!-- Hero Section -->
-        <section
-            class="game-gradient"
-            style="
+        <section class="game-gradient"
+                 style="
                 min-height: 100vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 64px 16px;
-            "
-        >
+            ">
             <div style="max-width: 1024px; margin: 0 auto; text-align: center">
                 <div style="margin-bottom: 32px">
-                    <h1
-                        class="text-gradient hero-title"
+                    <h1 class="text-gradient hero-title"
                         style="
-                            font-size: 4rem;
+                            font-size: 7rem;
                             font-weight: bold;
                             margin-bottom: 16px;
-                        "
-                    >
+                        ">
                         Asya Doga
                     </h1>
-                    <h2
-                        style="
+                    <h2 style="
                             font-size: 1.5rem;
                             font-weight: 500;
                             color: #d1d5db;
                             margin-bottom: 24px;
-                        "
-                    >
+                        ">
                         Game Developent Student
                     </h2>
-                    <p
-                        style="
+                    <p style="
                             font-size: 1.125rem;
                             color: #9ca3af;
                             max-width: 512px;
                             margin: 0 auto;
                             line-height: 1.75;
-                        "
-                    >
-                       
+                        ">
+
                     </p>
                 </div>
-                <div
-                    style="
+                <div style="
                         display: flex;
                         flex-direction: column;
                         gap: 16px;
                         justify-content: center;
                         align-items: center;
-                    "
-                >
+                    ">
                     <a href="#games" class="btn btn-primary"> View My Games </a>
                     <a href="#contact" class="btn btn-outline">
                         Get In Touch
@@ -256,10 +253,8 @@
         </section>
 
         <!-- About Section -->
-        <section
-            id="about"
-            style="background-color: var(--game-purple); padding: 80px 16px"
-        >
+        <section id="about"
+                 style="background-color: var(--game-purple); padding: 80px 16px">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 64px">
                     <h2 class="section-title">About Me</h2>
@@ -267,66 +262,44 @@
                 </div>
 
                 <div class="grid grid-2" style="align-items: center">
-                    <div
-                        style="display: flex; flex-direction: column; gap: 24px"
-                    >
-                        <p
-                            style="
+                    <div style="display: flex; flex-direction: column; gap: 24px">
+                        <p style="
                                 font-size: 1.125rem;
                                 line-height: 1.75;
                                 color: #d1d5db;
-                            "
-                        >
-                            I'm a passionate indie game developer currently
-                            studying Computer Science at Masaryk University with a focus on game
+                            ">
+                            I'm an indie game developer currently
+                            studying Visual Informatics at Masaryk University with a focus on game
                             development.
                         </p>
-                        <p
-                            style="
+                        <p style="
                                 font-size: 1.125rem;
                                 line-height: 1.75;
                                 color: #d1d5db;
-                            "
-                        >
-                            I specialize in gameplay programming,
-                            and collaborative development. Whether working solo
-                            or as part of a team. 
+                            ">
+                            I specialize in gameplay programming and am passionate about animation, 
+                            with experience working both independently and in team environments.
                         </p>
 
-                        <div
-                            style="
+                        <div style="
                                 display: flex;
                                 flex-wrap: wrap;
                                 gap: 12px;
                                 padding-top: 16px;
-                            "
-                        >
-                            <span
-                                class="badge"
-                                style="background-color: var(--game-teal)"
-                                >Unity</span
-                            >
-                            <span
-                                class="badge"
-                                style="background-color: var(--game-teal)"
-                                >C#</span
-                            >
-                            <span
-                                class="badge"
-                                style="background-color: var(--game-teal)"
-                                >Game Design</span
-                            >
-                            <span
-                                class="badge"
-                                style="background-color: var(--game-teal)"
-                                >Game Development</span
-                            >
+                            ">
+                            <span class="badge"
+                                  style="background-color: var(--game-teal)">Unity</span>
+                            <span class="badge"
+                                  style="background-color: var(--game-teal)">C#</span>
+                            <span class="badge"
+                                  style="background-color: var(--game-teal)">Game Design</span>
+                            <span class="badge"
+                                  style="background-color: var(--game-teal)">Game Development</span>
                         </div>
                     </div>
 
                     <div style="position: relative">
-                        <div
-                            style="
+                        <div style="
                                 width: 100%;
                                 height: 320px;
                                 border-radius: 16px;
@@ -337,10 +310,8 @@
                                     var(--game-blue) 0%,
                                     var(--game-teal) 100%
                                 );
-                            "
-                        >
-                            <div
-                                style="
+                            ">
+                            <div style="
                                     position: absolute;
                                     inset: 0;
                                     background: linear-gradient(
@@ -349,11 +320,9 @@
                                         rgba(255, 255, 255, 0.05) 50%,
                                         rgba(255, 255, 255, 0.1) 100%
                                     );
-                                "
-                            ></div>
+                                "></div>
                             <!-- Geometric gaming elements -->
-                            <div
-                                style="
+                            <div style="
                                     position: absolute;
                                     top: 32px;
                                     left: 32px;
@@ -363,10 +332,8 @@
                                     border-radius: 8px;
                                     transform: rotate(45deg);
                                     opacity: 0.7;
-                                "
-                            ></div>
-                            <div
-                                style="
+                                "></div>
+                            <div style="
                                     position: absolute;
                                     top: 80px;
                                     right: 48px;
@@ -375,10 +342,8 @@
                                     background-color: #a855f7;
                                     border-radius: 50%;
                                     opacity: 0.6;
-                                "
-                            ></div>
-                            <div
-                                style="
+                                "></div>
+                            <div style="
                                     position: absolute;
                                     bottom: 64px;
                                     left: 64px;
@@ -388,10 +353,8 @@
                                     border-radius: 8px;
                                     transform: rotate(12deg);
                                     opacity: 0.4;
-                                "
-                            ></div>
-                            <div
-                                style="
+                                "></div>
+                            <div style="
                                     position: absolute;
                                     bottom: 32px;
                                     right: 32px;
@@ -400,25 +363,20 @@
                                     background-color: var(--game-teal);
                                     border-radius: 50%;
                                     opacity: 0.8;
-                                "
-                            ></div>
+                                "></div>
 
-                            <div
-                                style="
+                            <div style="
                                     position: absolute;
                                     inset: 0;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
-                                "
-                            >
-                                <i
-                                    class="fas fa-gamepad"
-                                    style="
+                                ">
+                                <i class="fas fa-gamepad"
+                                   style="
                                         font-size: 4rem;
                                         color: rgba(255, 255, 255, 0.2);
-                                    "
-                                ></i>
+                                    "></i>
                             </div>
                         </div>
                     </div>
@@ -427,31 +385,26 @@
         </section>
 
         <!-- Games Section -->
-        <section
-            id="games"
-            style="background-color: var(--game-dark); padding: 80px 16px"
-        >
+        <section id="games"
+                 style="background-color: var(--game-dark); padding: 80px 16px">
             <div style="max-width: 1400px; margin: 0 auto">
                 <div style="text-align: center; margin-bottom: 64px">
                     <h2 class="section-title">My Games</h2>
                     <div class="section-divider"></div>
-                    <p
-                        style="
+                    <p style="
                             font-size: 1.25rem;
                             color: #9ca3af;
                             max-width: 768px;
                             margin: 0 auto;
-                        "
-                    >
+                        ">
                         A collection of games I've developed and collaborated
-                        on, each showcasing different aspects of game design and
-                        development.
+                        on.
                     </p>
                 </div>
 
                 <div class="grid grid-3">
                     <!-- Game 1: Tak bojuj, ne?! (Kissy) -->
-                    <div class="card">
+                    <div class="card" style="display: flex; flex-direction: column;">
                         <div style="overflow: hidden">
                             <img src="https://img.itch.zone/aW1nLzI2MDE4MjMzLmdpZg==/original/s7n04u.gif"
                                  alt="Kissy Gif"
@@ -462,7 +415,8 @@
                                     transition: filter 0.3s ease;
                                 " />
                         </div>
-                        <div style="padding: 24px">
+
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
                             <h3 style="
                                     font-size: 1.25rem;
                                     font-weight: bold;
@@ -477,9 +431,8 @@
                                     font-size: 14px;
                                     line-height: 1.5;
                                 ">
-                                In Kissy, you need to catch words "tak", "bojuj", and "ne" in the correct order to increase your combo
-                                and earn points before the time runs out.
-                                You can also catch the kissy face and send kisses to increase your timer.
+                                Catch the words ‘tak’, ‘bojuj’, and ‘ne’ in the correct order to build your combo and rack up points before the clock runs out.
+                                Grab the kissy face to send kisses and extend your remaining time.
                             </p>
                             <div style="
                                     display: flex;
@@ -488,21 +441,21 @@
                                     margin-bottom: 16px;
                                 ">
                                 <span class="badge"
-                                      style="background-color: #2563eb">Programmer</span>
+                                      style="background-color: #729bf2">Programmer</span>
                             </div>
                             <a href="https://bleskocvok.itch.io/tak-bojuj-ne"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="btn btn-primary"
-                               style="width: 100%; text-align: center">
+                               style="width: 100%; text-align: center; margin-top: auto;">
                                 <i class="fab fa-itch-io"
                                    style="margin-right: 8px"></i>Play on itch.io
                             </a>
                         </div>
                     </div>
 
-                    <!-- Game 2: MuniMental -->
-                    <div class="card">
+                    <!-- Game 2: FlowerPhobia -->
+                    <div class="card" style="display: flex; flex-direction: column;">
                         <div style="overflow: hidden">
                             <img src="https://img.itch.zone/aW1nLzIwOTIyMzY4LmpwZw==/315x250%23c/HqBz3u.jpg"
                                  alt="FlowerPhobia img"
@@ -513,7 +466,7 @@
                                     transition: filter 0.3s ease;
                                 " />
                         </div>
-                        <div style="padding: 24px">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
                             <h3 style="
                                     font-size: 1.25rem;
                                     font-weight: bold;
@@ -539,7 +492,7 @@
                                     margin-bottom: 16px;
                                 ">
                                 <span class="badge"
-                                      style="background-color: #2563eb">Programmer</span>
+                                      style="background-color: #729bf2">Programmer</span>
                             </div>
                             <a href="https://abhishta.itch.io/flowerphobia"
                                target="_blank"
@@ -552,8 +505,8 @@
                         </div>
                     </div>
 
-                    <!-- Game 3: Piranha Minigame -->
-                    <div class="card">
+                    <!-- Game 3: EGGO -->
+                    <div class="card" style="display: flex; flex-direction: column;">
                         <div style="overflow: hidden">
                             <img src="https://img.itch.zone/aW1nLzI2OTU5NDA2LnBuZw==/315x250%23c/rJ23ty.png"
                                  alt="Piranha img"
@@ -564,7 +517,7 @@
                                     transition: filter 0.3s ease;
                                 " />
                         </div>
-                        <div style="padding: 24px">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
                             <h3 style="
                                     font-size: 1.25rem;
                                     font-weight: bold;
@@ -579,19 +532,20 @@
                                     font-size: 14px;
                                     line-height: 1.5;
                                 ">
-                                A long time eggo...
+                                In a medieval world with a chaotic twist, you must cook an omelette using ingredients that fly above the pan! 
+                                Cut them, then catch them in the air and prepare to serve your dish in a truly unconventional way.
                             </p>
                             <div style="
-                                    display: flex;  
+                                    display: flex;
                                     justify-content: flex-start;
                                     align-items: center;
                                     margin-bottom: 16px;
                                     gap: 10px;
                                 ">
                                 <span class="badge"
-                                      style="background-color: #2563eb">Programmer</span>
+                                      style="background-color: #729bf2">Programmer</span>
 
-                                <span class="badge" style="background-color: #16a34a;">
+                                <span class="badge" style="background-color: #537d44; ">
                                     Level Designer
                                 </span>
                             </div>
@@ -599,7 +553,7 @@
                                target="_blank"
                                rel="noopener noreferrer"
                                class="btn btn-primary"
-                               style="width: 100%; text-align: center">
+                               style="width: 100%; text-align: center; margin-top: auto;">
                                 <i class="fab fa-itch-io"
                                    style="margin-right: 8px"></i>Play on itch.io
                             </a>
@@ -607,7 +561,7 @@
                     </div>
 
                     <!-- Game 4: Deer Minigame -->
-                    <div class="card">
+                    <div class="card" style="display: flex; flex-direction: column;">
                         <div style="overflow: hidden">
                             <img src="https://img.itch.zone/aW1nLzI2OTU3Mzk1LnBuZw==/315x250%23c/AK0gNo.png"
                                  alt="deer img"
@@ -618,7 +572,7 @@
                                     transition: filter 0.3s ease;
                                 " />
                         </div>
-                        <div style="padding: 24px">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
                             <h3 style="
                                     font-size: 1.25rem;
                                     font-weight: bold;
@@ -642,13 +596,13 @@
                                     margin-bottom: 16px;
                                 ">
                                 <span class="badge"
-                                      style="background-color: #dc2626">Solo Developer</span>
+                                      style="background-color: #6c4f39 ">Solo Developer</span>
                             </div>
                             <a href="https://asyadoga.itch.io/deer-minigame"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="btn btn-primary"
-                               style="width: 100%; text-align: center">
+                               style="width: 100%; text-align: center; margin-top: auto;">
                                 <i class="fab fa-itch-io"
                                    style="margin-right: 8px"></i>Play on itch.io
                             </a>
@@ -656,7 +610,7 @@
                     </div>
 
                     <!-- Game 5: Piranha Minigame -->
-                    <div class="card">
+                    <div class="card" style="display: flex; flex-direction: column;">
                         <div style="overflow: hidden">
                             <img src="https://img.itch.zone/aW1nLzI2OTU3MDUyLnBuZw==/315x250%23c/jcXWhe.png"
                                  alt="Piranha img"
@@ -667,7 +621,7 @@
                                     transition: filter 0.3s ease;
                                 " />
                         </div>
-                        <div style="padding: 24px">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
                             <h3 style="
                                     font-size: 1.25rem;
                                     font-weight: bold;
@@ -694,14 +648,14 @@
                                     margin-bottom: 16px;
                                 ">
                                 <span class="badge"
-                                      style="background-color: #dc2626">Solo Developer</span>
+                                      style="background-color: #6c4f39">Solo Developer</span>
                             </div>
 
                             <a href="https://asyadoga.itch.io/piranha-minigame"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="btn btn-primary"
-                               style="width: 100%; text-align: center">
+                               style="width: 100%; text-align: center; margin-top: auto;">
                                 <i class="fab fa-itch-io"
                                    style="margin-right: 8px"></i>Play on itch.io
                             </a>
@@ -712,11 +666,75 @@
             </div>
         </section>
 
+        <!-- Animations Section -->
+        <section id="anims"
+                 style="background-color: var(--game-dark); padding: 80px 16px">
+            <div style="max-width: 1400px; margin: 0 auto">
+                <div style="text-align: center; margin-bottom: 64px">
+                    <h2 class="section-title">My Models and Animations</h2>
+                    <div class="section-divider"></div>
+                    <p style="
+                            font-size: 1.25rem;
+                            color: #9ca3af;
+                            max-width: 768px;
+                            margin: 0 auto;
+                        ">
+                        A collection of models and animations I hand crafted.
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <!-- Anim 1: Duck Animation -->
+                    <div class="card" style="display: flex; flex-direction: column;">
+                        <div style="overflow: hidden">
+                            <img src="Images/Duck.png"
+                                 alt="Duck"
+                                 style="
+                                    width: 100%;
+                                    height: 192px;
+                                    object-fit: cover;
+                                    transition: filter 0.3s ease;
+                                " />
+                        </div>
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
+                            <h3 style="
+                                    font-size: 1.25rem;
+                                    font-weight: bold;
+                                    margin-bottom: 8px;
+                                    color: white;
+                                ">
+                                Duck Swimming
+                            </h3>
+                            <p style="
+                                    color: #9ca3af;
+                                    margin-bottom: 16px;
+                                    font-size: 14px;
+                                    line-height: 1.5;
+                                ">
+                                Duck model and environment created and animated with Blender.
+                            </p>
+
+                            <a href="https://youtu.be/eKsO0dkpe5A"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-primary"
+                               style="width: 100%; text-align: center; margin-top: auto;">
+                                <i class="fa-brands fa-youtube"
+                                   style="margin-right: 8px"></i>Watch on Youtube
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
+
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
-        <section
-            id="contact"
-            style="background-color: var(--game-purple); padding: 80px 16px"
-        >
+        <section id="contact"
+                 style="background-color: var(--game-purple); padding: 80px 16px">
             <div style="max-width: 1024px; margin: 0 auto; text-align: center">
                 <div style="margin-bottom: 64px">
                     <h2 class="section-title">Contacts</h2>
@@ -724,81 +742,65 @@
                 </div>
 
                 <div class="grid grid-2" style="margin-bottom: 48px">
-                    <div
-                        class="card"
-                        style="
+                    <div class="card"
+                         style="
                             padding: 32px;
                             background-color: var(--game-dark);
-                        "
-                    >
+                        ">
                         <div style="text-align: center">
-                            <i
-                                class="fab fa-linkedin"
-                                style="
+                            <i class="fab fa-linkedin"
+                               style="
                                     font-size: 2rem;
                                     margin-bottom: 16px;
                                     color: var(--game-pink);
-                                "
-                            ></i>
-                            <h3
-                                style="
+                                "></i>
+                            <h3 style="
                                     font-size: 1.25rem;
                                     font-weight: 600;
                                     margin-bottom: 8px;
                                     color: white;
-                                "
-                            >
+                                ">
                                 LinkedIn
                             </h3>
-                            <a
-                                href="https://www.linkedin.com/in/asya-do%C4%9Fa-%C3%B6zer"
-                                style="
+                            <a href="https://www.linkedin.com/in/asya-do%C4%9Fa-%C3%B6zer"
+                               style="
                                     color: #9ca3af;
                                     text-decoration: none;
                                     transition: color 0.3s ease;
-                                "
-                            >
+                                ">
                                 Asya Doga
                             </a>
                         </div>
                     </div>
 
-                    <div
-                        class="card"
-                        style="
+                    <div class="card"
+                         style="
                             padding: 32px;
                             background-color: var(--game-dark);
-                        "
-                    >
+                        ">
                         <div style="text-align: center">
-                            <i
-                                class="fab fa-itch-io"
-                                style="
+                            <i class="fab fa-itch-io"
+                               style="
                                     font-size: 2rem;
                                     margin-bottom: 16px;
                                     color: var(--game-pink);
-                                "
-                            ></i>
-                            <h3
-                                style="
+                                "></i>
+                            <h3 style="
                                     font-size: 1.25rem;
                                     font-weight: 600;
                                     margin-bottom: 8px;
                                     color: white;
-                                "
-                            >
+                                ">
                                 itch.io Profile
                             </h3>
-                            <a
-                                href="https://asyadoga.itch.io/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style="
+                            <a href="https://asyadoga.itch.io/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               style="
                                     color: #9ca3af;
                                     text-decoration: none;
                                     transition: color 0.3s ease;
-                                "
-                            >
+                                ">
                                 @asyadoga
                             </a>
                         </div>
@@ -808,13 +810,11 @@
         </section>
 
         <!-- Footer -->
-        <footer
-            style="
+        <footer style="
                 background-color: var(--game-teal);
                 padding: 32px 16px;
                 border-top: 1px solid var(--game-pink);
-            "
-        >
+            ">
             <div style="max-width: 1200px; margin: 0 auto; text-align: center">
                 <p style="color: #6b7280">
                     © 2026 Asya Doga. Built with passion for gaming and powered
